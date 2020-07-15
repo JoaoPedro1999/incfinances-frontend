@@ -55,15 +55,15 @@ export const AuthProvider: React.FC = ({ children }) => {
   }, []);
 
   const signOut = useCallback(() => {
-    localStorage.removeItem('@GoBarber:token');
-    localStorage.removeItem('@GoBarber:user');
+    localStorage.removeItem('@IncFinances:token');
+    localStorage.removeItem('@IncFinances:user');
 
     setData({} as AuthData);
   }, []);
 
   const updateUser = useCallback(
     (user: User) => {
-      localStorage.setItem('@GoBarber:user', JSON.stringify(user));
+      localStorage.setItem('@IncFinances:user', JSON.stringify(user));
 
       setData({
         token: data.token,
